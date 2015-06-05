@@ -1,5 +1,5 @@
-#show-ticket {
-  display: none;
+#show-order {
+  display: ;
   background: lightblue;
   margin-left: 30%;
   margin-right: 30%;
@@ -25,9 +25,9 @@
 }
 
 .showtime {
-  display: none;
+  display: ;
 }
 
 .type {
-  display: none;
+  display: ;
 }

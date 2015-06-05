@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pizza Start</title>
+  </head>
+  <body>
+    <div class="container-liquid">
+      <div class="jumbotron">
+        <h1>Pizza Start</h1>
+        <p class="lead">Order your pizza online:</p>
+      </div>
+      <div class="panel panel-info form listing">
+        <div class="panel-heading">
+          <h2 class="panel-title">Customer:</h2>
+        </div>
+        <form id="pizzOrder">
+          <div class="panel-body">
+            <div class="col-md-3">
+              <h3>Name</h3>
+              <div class="form-group">
+                <input id="customer" class="form-control" type="text" placeholder="Enter your Name"><br>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info form showtime">
+            <div class="panel-heading">
+             <h2 class="panel-title">Size:</h2>
+            </div>
+            <div class="panel-body">
+              <div class="col-md-4">
+                <h3>Small</h3>
+                <input type="radio" name="size" value="small">
+              </div>
+              <div class="col-md-4">
+                <h3>Medium</h3>
+                <input type="radio" name="size" value="medium">
+              </div>
+              <div class="col-md-4">
+                <h3>Large</h3>
+                <input type="radio" name="size" value="large">
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-info form type">
+            <div class="panel-heading">
+              <h2 class="panel-title">Ingredients:</h2>
+            </div>
+            <div class="panel-body">
+              <div class="col-md-2">
+                <h4>Mushrooms</h4>
+                <input type="checkbox" name="ingredients" value="mushrooms">
+              </div>
+              <div class="col-md-2">
+                <h4>Olives</h4>
+                <input type="checkbox" name="ingredients" value="olives">
+              </div>
+              <div class="col-md-2">
+                <h4>Sauage</h4>
+                <input type="checkbox" name="ingredients" value="sausage">
+              </div>
+              <div class="col-md-2">
+                <h4>Pepperoni</h4>
+                <input type="checkbox" name="ingredients" value="pepperoni">
+              </div>
+              <div class="col-md-2">
+                <h4>Onions</h4>
+                <input type="checkbox" name="ingredients" value="onions">
+              </div>
+              <div class="col-md-2">
+                <h4>Extra Cheese</h4>
+                <input type="checkbox" name="ingredients" value="extra cheese">
+              </div>
+            </div>
+          </div>
+          <br>
+          <button type="submit" class="btn btn-block btn-primary">Order Pizza</button>
+        </form>
+      </div>
+
+      <div id="show-order">
+        <p>Customer:  <span class="name"></span></p>
+        <p>Time:  <span class="showing"></span></p>
+        <p>Type:  <span class="type"></span></p>
+        <p>Cost:  <span class="cost"></span></p>
+      </div>
+    </div>
+  </body>
+</html>

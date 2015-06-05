@@ -10,13 +10,13 @@ function PizzaOrder(quantity, pizzaSize, ingredients, pizzaPrice){
   this.pizzaPrice = 0
 }
 
-// PizzaOrder.prototype.eachPizza = function() {
-//   return this.quantity + ": Size: " + this.pizzaSize + " Ingredients: " + this.ingredients;
-// }
+PizzaOrder.prototype.eachPizza = function() {
+  return this.quantity + ": Size: " + this.pizzaSize + " Ingredients: " + this.ingredients;
+}
 
 PizzaOrder.prototype.pizzaCost = function() {
-var baseCost = 0
-var price = 0
+  var baseCost = 0
+  var price = 0
 
   if (this.pizzaSize === "small") {
     baseCost = 5;
@@ -29,10 +29,9 @@ var price = 0
   if (this.pizzaSize === "large") {
     baseCost = 9;
   }
-
-  var myString = this.ingredients.valueOf();
-  var myArray = myString.split(" ")
-  var toppings = myArray.length;
+  //var myString = this.ingredients.valueOf();
+  //var myArray = myString.split(" ")
+  var toppings = this.ingredients.length;
 
   price = baseCost + (toppings * .50);
   return this.pizzaPrice = price;

@@ -10,7 +10,7 @@ describe('PizzaOrder', function(){
   });
 
   it("return the correct price for pizza ordered", function(){
-    var testOrder = new PizzaOrder(1,"large", "olives, mushrooms, sausage");
+    var testOrder = new PizzaOrder(1,"large", ["olives", "mushrooms", "sausage"]);
     testOrder.pizzaCost();
     expect(testOrder.pizzaPrice).to.equal(10.50);
   });
@@ -20,5 +20,11 @@ describe('Customer', function(){
   it("returns the customer", function(){
     var testCustomer = new Customer("Bobo Smith");
     expect(testCustomer.customer).to.equal("Bobo Smith");
+  });
+
+  it("attaches an order and returns the customer", function(){
+    var testCustomer = new Customer("Bobo Smith");
+    var testOrder = new PizzaOrder(1,"large",["olives","mushrooms","sausage"]);
+    expect(testCustomer.pizzaOrders).to.equal(1,"large", ["olives", "mushrooms", "sausage"]);
   });
 });
