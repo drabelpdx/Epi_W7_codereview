@@ -11,7 +11,7 @@
 
 .jumbotron {
   position: relative;
-  background: #000 url("https://download.unsplash.com/photo-1415201179613-bd037ff5eb29") center center;
+  background: #000 url("https://download.unsplash.com/photo-1414438992182-69e404046f80") center center;
   width: 100%;
   height: inherit;
   background-size: cover;
@@ -19,6 +19,9 @@
   color: white;
 }
 
+.container-liquid {
+
+}
 
 .listing {
 

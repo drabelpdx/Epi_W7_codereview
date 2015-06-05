@@ -4,19 +4,19 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.11.3.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Pizza Start</title>
+    <title>Pisa Pizza</title>
   </head>
   <body>
     <div class="container-liquid">
       <div class="jumbotron">
-        <h1>Pizza Start</h1>
+        <h1>Pisa Pizza</h1>
         <p class="lead">Order your pizza online:</p>
       </div>
-      <div class="panel panel-info form listing">
+      <div class="panel panel-danger form listing">
         <div class="panel-heading">
           <h2 class="panel-title">Customer:</h2>
         </div>
-        <form id="pizzOrder">
+        <form id="pizzaorder">
           <div class="panel-body">
             <div class="col-md-3">
               <h3>Name</h3>
@@ -25,7 +25,7 @@
               </div>
             </div>
           </div>
-          <div class="panel panel-info form showtime">
+          <div class="panel panel-danger form showtime">
             <div class="panel-heading">
              <h2 class="panel-title">Size:</h2>
             </div>
@@ -44,46 +44,46 @@
               </div>
             </div>
           </div>
-          <div class="panel panel-info form type">
+          <div class="panel panel-danger form type">
             <div class="panel-heading">
               <h2 class="panel-title">Ingredients:</h2>
             </div>
             <div class="panel-body">
               <div class="col-md-2">
                 <h4>Mushrooms</h4>
-                <input type="checkbox" name="ingredients" value="mushrooms">
+                <input type="checkbox" name="ingredients" value=" mushrooms">
               </div>
               <div class="col-md-2">
                 <h4>Olives</h4>
-                <input type="checkbox" name="ingredients" value="olives">
+                <input type="checkbox" name="ingredients" value=" olives">
               </div>
               <div class="col-md-2">
                 <h4>Sauage</h4>
-                <input type="checkbox" name="ingredients" value="sausage">
+                <input type="checkbox" name="ingredients" value=" sausage">
               </div>
               <div class="col-md-2">
                 <h4>Pepperoni</h4>
-                <input type="checkbox" name="ingredients" value="pepperoni">
+                <input type="checkbox" name="ingredients" value=" pepperoni">
               </div>
               <div class="col-md-2">
                 <h4>Onions</h4>
-                <input type="checkbox" name="ingredients" value="onions">
+                <input type="checkbox" name="ingredients" value=" onions">
               </div>
               <div class="col-md-2">
                 <h4>Extra Cheese</h4>
-                <input type="checkbox" name="ingredients" value="extra cheese">
+                <input type="checkbox" name="ingredients" value=" extra cheese">
               </div>
             </div>
           </div>
           <br>
-          <button type="submit" class="btn btn-block btn-primary">Order Pizza</button>
+          <button type="submit" class="btn btn-block btn-danger">Order Pizza</button>
         </form>
       </div>
 
       <div id="show-order">
-        <p>Customer:  <span class="name"></span></p>
-        <p>Time:  <span class="showing"></span></p>
-        <p>Type:  <span class="type"></span></p>
+        <p>Customer:  <span class="customer"></span></p>
+        <p>Size:  <span class="size"></span></p>
+        <p>Ingredients:  <span class="ingredients"></span></p>
         <p>Cost:  <span class="cost"></span></p>
       </div>
     </div>
