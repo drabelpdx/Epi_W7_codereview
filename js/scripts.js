@@ -42,6 +42,60 @@ PizzaOrder.prototype.pizzaCost = function() {
 
 $(document).ready(function(){
 
+  $("#add-pizza").click(function() {
+   $("#new-pizzas").append('<div class="new-pizza">' +
+                                 '<div class="panel panel-danger form size">' +
+                                   '<div class="panel-heading">' +
+                                    '<h2 class="panel-title">Size:</h2>' +
+                                   '</div>' +
+                                   '<div class="panel-body">' +
+                                     '<div class="col-md-4">' +
+                                       '<h3>Small</h3>' +
+                                       '<input type="radio" name="size" value="small">' +
+                                     '</div>' +
+                                     '<div class="col-md-4">' +
+                                      '<h3>Medium</h3>' +
+                                       '<input type="radio" name="size" value="medium">' +
+                                     '</div>' +
+                                     '<div class="col-md-4">' +
+                                       '<h3>Large</h3>' +
+                                       '<input type="radio" name="size" value="large">' +
+                                     '</div>' +
+                                   '</div>' +
+                                 '</div>' +
+                                 '<div class="panel panel-danger form ingredients">' +
+                                   '<div class="panel-heading">' +
+                                     '<h2 class="panel-title">Ingredients:</h2>' +
+                                   '</div>' +
+                                   '<div class="panel-body">' +
+                                     '<div class="col-md-2">' +
+                                       '<h4>Mushrooms</h4>' +
+                                       '<input type="checkbox" name="ingredients" value=" mushrooms">' +
+                                     '</div>' +
+                                     '<div class="col-md-2">' +
+                                       '<h4>Olives</h4>' +
+                                       '<input type="checkbox" name="ingredients" value=" olives">' +
+                                     '</div>' +
+                                     '<div class="col-md-2">' +
+                                       '<h4>Sauage</h4>'+
+                                       '<input type="checkbox" name="ingredients" value=" sausage">' +
+                                     '</div>' +
+                                     '<div class="col-md-2">' +
+                                       '<h4>Pepperoni</h4>' +
+                                       '<input type="checkbox" name="ingredients" value=" pepperoni">' +
+                                     '</div>' +
+                                     '<div class="col-md-2">' +
+                                       '<h4>Onions</h4>' +
+                                       '<input type="checkbox" name="ingredients" value=" onions">' +
+                                     '</div>' +
+                                     '<div class="col-md-2">' +
+                                       '<h4>Extra Cheese</h4>' +
+                                       '<input type="checkbox" name="ingredients" value=" extra cheese">' +
+                                     '</div>' +
+                                   '</div>' +
+                                 '</div>');
+  });
+
   $("form#pizzaorder").submit(function(event){
     event.preventDefault();
 
