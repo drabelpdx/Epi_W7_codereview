@@ -1,5 +1,5 @@
 #show-order {
-  display: ;
+  display: none;
   background: lightblue;
   margin-left: 20%;
   margin-right: 20%;
@@ -27,10 +27,14 @@
 
 }
 
-.showtime {
+.size {
   display: ;
 }
 
-.type {
-  display: ;
+.ingredients {
+  display: none;
+}
+
+.new-ingredients {
+  display: none;
 }

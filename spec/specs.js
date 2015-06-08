@@ -26,6 +26,6 @@ describe('Customer', function(){
     var testCustomer = new Customer("Bobo Smith");
     var testOrder = new PizzaOrder("large",["olives","mushrooms","sausage"]);
     testCustomer.PizzaOrders.push(testOrder);
-    expect(testCustomer.PizzaOrders).to.eql(["large", ["olives", "mushrooms", "sausage"]]);
+    expect(testCustomer.PizzaOrders.ingredients).to.eql(["olives", "mushrooms", "sausage"]);
   });
 });

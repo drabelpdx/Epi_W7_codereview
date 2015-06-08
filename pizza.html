@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -27,9 +28,10 @@
           </div>
           <div id="new-pizzas">
             <div class="new-pizza">
-              <div class="panel panel-danger form size">
+              <div class="size">
+              <div class="panel panel-danger form">
                 <div class="panel-heading">
-                 <h2 class="panel-title">Size: Small starts at $5; Medium starts at $7; and Large starts at $9</h2>
+                 <h2 class="panel-title">Size: Small starts at $5.00; Medium starts at $7.00; and Large starts at $9.00</h2>
                 </div>
                 <div class="panel-body">
                   <div class="col-md-4">
@@ -46,11 +48,38 @@
                   </div>
                 </div>
               </div>
-              <div class="panel panel-danger form ingredients">
+              </div>
+              <div class="ingredients">
+              <div class="panel panel-danger form">
                 <div class="panel-heading">
-                  <h2 class="panel-title">Ingredients:  Add $.50 for each topping.</h2>
+                  <h2 class="panel-title">Ingredients:  Add $.49 for each topping.</h2>
                 </div>
                 <div class="panel-body">
+                  <div class="col-md-2">
+                    <h4>Extra Cheese</h4>
+                    <input type="checkbox" name="new-ingredients" value=" extra cheese">
+                  </div>
+                  <div class="col-md-2">
+                    <h4>Pepperoni</h4>
+                    <input type="checkbox" name="new-ingredients" value=" pepperoni">
+                  </div>
+                  <div class="col-md-2">
+                    <h4>Sauage</h4>
+                    <input type="checkbox" name="new-ingredients" value=" sausage">
+                  </div>
+                  <div class="col-md-2">
+                    <h4>Canadian Bacon</h4>
+                    <input type="checkbox" name="new-ingredients" value=" canadian bacon">
+                  </div>
+                  <div class="col-md-2">
+                    <h4>Thick Crust</h4>
+                    <input type="checkbox" name="new-ingredients" value=" thick crust">
+                  </div>
+                  <div class="col-md-2">
+                    <h4>Garlic Sauce</h4>
+                    <input type="checkbox" name="new-ingredients" value=" garlic sauce">
+                  </div>
+                  <br><br>
                   <div class="col-md-2">
                     <h4>Mushrooms</h4>
                     <input type="checkbox" name="new-ingredients" value=" mushrooms">
@@ -60,31 +89,33 @@
                     <input type="checkbox" name="new-ingredients" value=" olives">
                   </div>
                   <div class="col-md-2">
-                    <h4>Sauage</h4>
-                    <input type="checkbox" name="new-ingredients" value=" sausage">
-                  </div>
-                  <div class="col-md-2">
-                    <h4>Pepperoni</h4>
-                    <input type="checkbox" name="new-ingredients" value=" pepperoni">
-                  </div>
-                  <div class="col-md-2">
                     <h4>Onions</h4>
                     <input type="checkbox" name="new-ingredients" value=" onions">
                   </div>
                   <div class="col-md-2">
-                    <h4>Extra Cheese</h4>
-                    <input type="checkbox" name="new-ingredients" value=" extra cheese">
+                    <h4>Tomatoes</h4>
+                    <input type="checkbox" name="new-ingredients" value=" tomatoes">
+                  </div>
+                  <div class="col-md-2">
+                    <h4>Pineapple</h4>
+                    <input type="checkbox" name="new-ingredients" value=" pineapple">
+                  </div>
+                  <div class="col-md-2">
+                    <h4>Pine Nuts</h4>
+                    <input type="checkbox" name="new-ingredients" value=" pine nuts">
                   </div>
                 </div>
               </div>
             </div>
+            </div>
           </div>
           <br>
-          <span class="btn btn-primary" id="add-pizza">Add another pizza</span>
-          <br>
-          <button type="submit" class="btn btn-block btn-danger">Order Pizza</button>
+          <span class="btn btn-block btn-danger" id="add-pizza">Add another pizza</span>
+          <br><br>
+          <button type="submit" class="btn btn-block btn-info">Order Pizza</button>
         </form>
       </div>
+      <br>
 
       <div id="show-order">
         <p>Customer:  <span class="customer"></span></p>
@@ -92,6 +123,8 @@
         <ul id="pizzas">
         </ul>
         <p>Total Cost:  <span class="totalcost"></span></p>
+        <br>
+        <p style="float: right;">Click to reload page.</p>
       </div>
     </div>
   </body>

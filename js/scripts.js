@@ -28,11 +28,10 @@ PizzaOrder.prototype.pizzaCost = function() {
   if (this.pizzaSize === "large") {
     baseCost = 9;
   }
-//  var myString = this.ingredients.valueOf();
-//  var myArray = myString.split(" ")
+
   var toppings = this.ingredients.length;
 
-  price = baseCost + (toppings * 0.50);
+  price = baseCost + (toppings * 0.49);
   price = parseFloat(price).toFixed(2);
 
   return this.pizzaPrice = price;
@@ -40,11 +39,27 @@ PizzaOrder.prototype.pizzaCost = function() {
 
 
 $(document).ready(function(){
+
+  $('.size').change(function() {
+    $(".ingredients").show();
+  });
+
+  $('.size input:checkbox[name="new-size"]').on('change', function() {
+    $('.size input:checkbox[name="new-size"]').not(this).prop('checked', false);
+  });
+
+  var pizzaCount = 1
   $("#add-pizza").click(function() {
+    pizzaCount++;
+    var newSize = "size";
+    var count = pizzaCount.toString();
+    var sizeClass = newSize.concat(count);
+
    $("#new-pizzas").append('<div class="new-pizza">' +
-                             '<div class="panel panel-danger form size">' +
+                             '<div class= \ ' + sizeClass + ' \ >' +
+                             '<div class="panel panel-danger form">' +
                                '<div class="panel-heading">' +
-                                '<h2 class="panel-title">Size: Small starts at $5; Medium starts at $7; and Large starts at $9</h2>' +
+                                '<h2 class="panel-title">Size: Small starts at $5.00; Medium starts at $7.00; and Large starts at $9.00</h2>' +
                                '</div>' +
                                '<div class="panel-body">' +
                                  '<div class="col-md-4">' +
@@ -61,11 +76,38 @@ $(document).ready(function(){
                                  '</div>' +
                                '</div>' +
                              '</div>' +
-                             '<div class="panel panel-danger form ingredients">' +
+                             '</div>' +
+                             '<div class="new-ingredients">' +
+                             '<div class="panel panel-danger form">' +
                                '<div class="panel-heading">' +
-                                 '<h2 class="panel-title">Ingredients:  Add $.50 for each topping.</h2>' +
+                                 '<h2 class="panel-title">Ingredients:  Add $.49 for each topping.</h2>' +
                                '</div>' +
                                '<div class="panel-body">' +
+                                 '<div class="col-md-2">' +
+                                   '<h4>Extra Cheese</h4>' +
+                                   '<input type="checkbox" name="new-ingredients" value=" extra cheese">' +
+                                 '</div>' +
+                                 '<div class="col-md-2">' +
+                                   '<h4>Pepperoni</h4>' +
+                                   '<input type="checkbox" name="new-ingredients" value=" pepperoni">' +
+                                 '</div>' +
+                                 '<div class="col-md-2">' +
+                                   '<h4>Sauage</h4>'+
+                                   '<input type="checkbox" name="new-ingredients" value=" sausage">' +
+                                 '</div>' +
+                                 '<div class="col-md-2">' +
+                                   '<h4>Canadian Bacon</h4>' +
+                                   '<input type="checkbox" name="new-ingredients" value=" canadian bacon">' +
+                                 '</div>' +
+                                 '<div class="col-md-2">' +
+                                   '<h4>Thick Crust</h4>' +
+                                   '<input type="checkbox" name="new-ingredients" value=" thick crust">' +
+                                 '</div>' +
+                                 '<div class="col-md-2">' +
+                                   '<h4>Garlic Sauce</h4>' +
+                                   '<input type="checkbox" name="new-ingredients" value=" garlic sauce">' +
+                                 '</div>' +
+                                 '<br><br>' +
                                  '<div class="col-md-2">' +
                                    '<h4>Mushrooms</h4>' +
                                    '<input type="checkbox" name="new-ingredients" value=" mushrooms">' +
@@ -75,29 +117,66 @@ $(document).ready(function(){
                                    '<input type="checkbox" name="new-ingredients" value=" olives">' +
                                  '</div>' +
                                  '<div class="col-md-2">' +
-                                   '<h4>Sauage</h4>'+
-                                   '<input type="checkbox" name="new-ingredients" value=" sausage">' +
-                                 '</div>' +
-                                 '<div class="col-md-2">' +
-                                   '<h4>Pepperoni</h4>' +
-                                   '<input type="checkbox" name="new-ingredients" value=" pepperoni">' +
-                                 '</div>' +
-                                 '<div class="col-md-2">' +
                                    '<h4>Onions</h4>' +
                                    '<input type="checkbox" name="new-ingredients" value=" onions">' +
                                  '</div>' +
                                  '<div class="col-md-2">' +
-                                   '<h4>Extra Cheese</h4>' +
-                                   '<input type="checkbox" name="new-ingredients" value=" extra cheese">' +
+                                   '<h4>Tomatoes</h4>' +
+                                   '<input type="checkbox" name="new-ingredients" value=" tomatoes">' +
+                                 '</div>' +
+                                 '<div class="col-md-2">' +
+                                   '<h4>Pineapple</h4>' +
+                                   '<input type="checkbox" name="new-ingredients" value=" pineapple">' +
+                                 '</div>' +
+                                 '<div class="col-md-2">' +
+                                   '<h4>Pine Nuts</h4>' +
+                                   '<input type="checkbox" name="new-ingredients" value=" pine nuts">' +
                                  '</div>' +
                                '</div>' +
                              '</div>' +
+                             '</div>' +
                             '</div>');
-  });
 
-   $('input:checkbox[name="new-size"]').on('change', function() {
-     $('input:checkbox[name="new-size"]').not(this).prop('checked', false);
- });
+    $('.size2').change(function() {
+      $(".new-ingredients").show();
+    });
+
+    $('.size3').change(function() {
+      $(".new-ingredients").show();
+    });
+
+    $('.size4').change(function() {
+      $(".new-ingredients").show();
+    });
+
+    $('.size5').change(function() {
+      $(".new-ingredients").show();
+    });
+
+    $('.size6').change(function() {
+      $(".new-ingredients").show();
+    });
+
+    $('.size2 input:checkbox[name="new-size"]').on('change', function() {
+      $('.size2 input:checkbox[name="new-size"]').not(this).prop('checked', false);
+    });
+
+    $('.size3 input:checkbox[name="new-size"]').on('change', function() {
+      $('.size3 input:checkbox[name="new-size"]').not(this).prop('checked', false);
+    });
+
+    $('.size4 input:checkbox[name="new-size"]').on('change', function() {
+      $('.size4 input:checkbox[name="new-size"]').not(this).prop('checked', false);
+    });
+
+    $('.size6 input:checkbox[name="new-size"]').on('change', function() {
+      $('.size6 input:checkbox[name="new-size"]').not(this).prop('checked', false);
+    });
+
+    $('.size6 input:checkbox[name="new-size"]').on('change', function() {
+      $('.size6 input:checkbox[name="new-size"]').not(this).prop('checked', false);
+    });
+  });
 
   $("form#pizzaorder").submit(function(event){
     event.preventDefault();
@@ -126,9 +205,18 @@ $(document).ready(function(){
     newCustomer.PizzaOrders.forEach(function(pizza) {
       runningCost = parseFloat(pizza.pizzaPrice);
       totalCost = (totalCost += runningCost);
-      return parseFloat(totalCost).toFixed(2);
+      return totalCost;
     });
-    $(".totalcost").append("<li> $" + totalCost + "</li>");
+    $(".totalcost").append("$" + totalCost);
+
+    $("#show-order").show();
+    $("div.form").hide();
+    $("button").hide();
 
   });
+
+  $('#show-order').click(function() {
+    document.location.reload(true);
+  });
+
 });
